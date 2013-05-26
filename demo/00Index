@@ -1,0 +1,6 @@
+zeroyields          Term structure estimation based on a dynamic zero yields data set
+csplines            Cubic splines term structure estimation
+nss_static          Static term structure estimation based on coupon bonds with the Nelson/Siegel method
+nss_dynamic         Dynamic term structure estimation based on coupon bonds with the Diebold/Li method 
+ 
+

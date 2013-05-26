@@ -1,0 +1,32 @@
+\name{fwr_asv}
+\alias{fwr_asv}
+\title{Forward Rate Calculation according to an adjusted Svensson Version}
+\description{The function calculates the forward rates based on a given
+  parameter and maturity vector. 
+}
+\usage{
+fwr_asv(beta, m)
+}
+
+\arguments{
+  \item{beta}{parameter vector \eqn{{\bm{\beta}} = \left(\beta_0,\beta_1,\beta_2,\tau_1,\beta_3,\tau_2\right)}.}
+  \item{m}{maturity or vector of maturities. }
+}
+\details{The forward rate for a maturity \eqn{m} is calculated according to the following formula:
+
+\deqn{f(m,\bm{\beta}) = \beta_0+\beta_1\exp\left(-\frac{m}{\tau_1}\right)+\beta_2\left[\left(\frac{m}{\tau_1}\right)\exp\left(-\frac{m}{\tau_1}\right)\right]
++\beta_3\left[\exp\left(-\frac{m}{\tau_2}\right)+ \left(\frac{2m}{\tau_2}-1\right)\exp\left(-\frac{2m}{\tau_2}\right)\right].}
+
+}
+\value{Returns the a vector with the calculated forward rate (vector).}
+
+
+\references{Lars E.O. Svensson (1994): 
+Estimating and Interpreting Forward Interest Rates: Sweden 1992 -1994. 
+\emph{Technical Reports 4871, National Bureau of Economic Research}.   }
+
+\seealso{ \command{\link{forwardrates}}}
+\examples{
+fwr_asv(c(0.03,0.02,0.01,5,0.01,10),1:30)
+}
+
