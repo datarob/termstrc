@@ -11,12 +11,12 @@ install.packages("termstrc")
 
 ## Development
 
-To install the development version of termstrc, it's easiest to use the [devtools](http://cran.r-project.org/package=devtools) package:
+To install the development version of *termstrc*, it's easiest to use the [devtools](http://cran.r-project.org/package=devtools) package:
 
 ```r
 library(devtools)
 install_github("termstrc", "datarob")
 ```
 
-You can also download the [zip ball](https://github.com/datarob/termstrc/zipball/master) or [tar ball](https://github.com/datarob/termstrc/tarball/master), decompress and run `R CMD INSTALL` on it. (On Windows first install [Rtools](http://cran.rstudio.com/bin/windows/Rtools/).
+You can also download the [zip ball](https://github.com/datarob/termstrc/zipball/master) or [tar ball](https://github.com/datarob/termstrc/tarball/master), decompress and run `R CMD INSTALL` on it. (On Windows first install [Rtools](http://cran.rstudio.com/bin/windows/Rtools/)).
 
