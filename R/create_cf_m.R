@@ -32,9 +32,12 @@ create_maturities_matrix <- function(group,include_price=FALSE) {
   n_of_bonds <- length(n_of_cf)
   max_cf <- max(n_of_cf)
   pos_cf <- c(0,cumsum(n_of_cf))
-  year_diff <- as.numeric(difftime(as.Date(group$CASHFLOW$DATE),
-  				as.Date(group$TODAY),units="days"))/365
- 
+  
+  # RQuantLib versions
+  # DayCounter: 2 ActualActual
+  year_diff <- mapply(function(i) yearFraction(as.Date(group$TODAY),
+                            as.Date(group$CASHFLOW$DATE)[[i]], 2), 1:sum(n_of_cf))
+  
   # the number of rows of the matrix is the number of 
   # maturity dates of the bond with the longest maturity
   # all missing elements of the matrix are filled up with zeros 
