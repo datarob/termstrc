@@ -50,6 +50,7 @@ print.summary.dyntermstrc_nss <- function(x,...) {
 
 
 
+
 plot.dyntermstrc_nss <- function(x,range=c(0,20), ...) {
 
   # 3D plot of zero-coupon yield curves
